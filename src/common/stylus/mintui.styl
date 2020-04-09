@@ -1,0 +1,607 @@
+/**mint-ui**/
+
+/*layer浮层*/
+.layui-m-layer 
+    position:relative
+    z-index:19891014
+
+.layui-m-layer * 
+    -webkit-box-sizing:content-box
+    -moz-box-sizing:content-box
+    box-sizing:content-box
+
+.layui-m-layermain,.layui-m-layershade 
+    position:fixed
+    left:0
+    top:0
+    width:100%
+    height:100%
+
+.layui-m-layershade 
+    background-color:rgba(0,0,0,.2)
+    pointer-events:auto
+
+.layui-m-layermain 
+    display:table
+    font-family:Helvetica,arial,sans-serif
+    pointer-events:none
+
+.layui-m-layermain .layui-m-layersection 
+    display:table-cell
+    vertical-align:middle
+    text-align:center
+
+.layui-m-layerchild 
+    position:relative
+    display:inline-block
+    text-align:left
+    background-color:#fff
+    font-size:14px
+    border-radius:5px
+    box-shadow:0 0 8px rgba(0,0,0,.1)
+    pointer-events:auto
+    -webkit-overflow-scrolling:touch
+    -webkit-animation-fill-mode:both
+    animation-fill-mode:both
+    animation-duration:.2s
+
+@-webkit-keyframes layui-m-anim-scale 
+{
+    0% {
+        opacity:0
+        -webkit-transform:scale(.5)
+        transform:scale(.5)
+    }
+    100% {
+        opacity:1
+        -webkit-transform:scale(1)
+        transform:scale(1)
+    }
+}
+@keyframes layui-m-anim-scale
+{
+    0% {
+        opacity:0
+        -webkit-transform:scale(.5)
+        transform:scale(.5)
+    }
+    100% {
+        opacity:1
+        -webkit-transform:scale(1)
+        transform:scale(1)
+    }
+}
+
+.layui-m-anim-scale 
+    animation-name:layui-m-anim-scale
+    -webkit-animation-name:layui-m-anim-scale
+
+@-webkit-keyframes layui-m-anim-up
+{
+    0% {
+        opacity:0
+        -webkit-transform:translateY(800px)
+        transform:translateY(800px)
+    }
+    100% {
+        opacity:1
+        -webkit-transform:translateY(0)
+        transform:translateY(0)
+    }
+}
+
+@keyframes layui-m-anim-up
+{
+    0% {
+        opacity:0
+        -webkit-transform:translateY(800px)
+        transform:translateY(800px)
+    }
+    100% {
+        opacity:1
+        -webkit-transform:translateY(0)
+        transform:translateY(0)
+    }
+}
+
+.layui-m-anim-up 
+    -webkit-animation-name:layui-m-anim-up
+    animation-name:layui-m-anim-up
+
+.layui-m-layer0 .layui-m-layerchild 
+    width:90%
+    max-width:640px
+
+.layui-m-layer1 .layui-m-layerchild 
+    border:none
+    border-radius:0
+
+.layui-m-layer2 .layui-m-layerchild 
+    width:auto
+    max-width:260px
+    min-width:40px
+    border:none
+    background:0 0
+    box-shadow:none
+    color:#fff
+
+.layui-m-layerchild h3 
+    padding:0 10px
+    height:60px
+    line-height:60px
+    font-size:16px
+    font-weight:400
+    border-radius:5px 5px 0 0
+    text-align:center
+
+.layui-m-layerbtn span,.layui-m-layerchild h3 
+    text-overflow:ellipsis
+    overflow:hidden
+    white-space:nowrap
+
+.layui-m-layercont 
+    padding:50px 30px
+    line-height:22px
+    text-align:center
+
+.layui-m-layer1 .layui-m-layercont 
+    padding:0
+    text-align:left
+
+.layui-m-layer2 .layui-m-layercont 
+    text-align:center
+    padding:0
+    line-height:0
+
+.layui-m-layer2 .layui-m-layercont i 
+    width:14px
+    height:14px
+    margin-left:4px
+    display:inline-block
+    background-color:#f35b00
+    border-radius:100%
+    -webkit-animation:layui-m-anim-loading 1.4s infinite ease-in-out
+    animation:layui-m-anim-loading 1.4s infinite ease-in-out
+    -webkit-animation-fill-mode:both
+    animation-fill-mode:both
+
+.layui-m-layerbtn,.layui-m-layerbtn span 
+    position:relative
+    text-align:center
+    border-radius:0 0 5px 5px
+
+.layui-m-layer2 .layui-m-layercont p 
+    margin-top:20px
+
+@-webkit-keyframes layui-m-anim-loading {
+    0%,100%,80% {
+        transform:scale(0)
+        -webkit-transform:scale(0)
+    }
+    40% {
+        transform:scale(1)
+        -webkit-transform:scale(1)
+    }
+}
+@keyframes layui-m-anim-loading {
+    0%,100%,80% {
+        transform:scale(0)
+        -webkit-transform:scale(0)
+    }
+    40% {
+        transform:scale(1)
+        -webkit-transform:scale(1)
+    }
+}
+.layui-m-layer2 .layui-m-layercont i:first-child 
+    margin-left:0
+    -webkit-animation-delay:-.32s
+    animation-delay:-.32s
+
+.layui-m-layer2 .layui-m-layercont i.layui-m-layerload 
+    -webkit-animation-delay:-.16s
+    animation-delay:-.16s
+
+.layui-m-layer2 .layui-m-layercont>div 
+    line-height:22px
+    padding-top:7px
+    margin-bottom:20px
+    font-size:14px
+
+.layui-m-layerbtn 
+    display:flex
+    width:100%
+    height:50px
+    line-height:50px
+    font-size:0
+    border-top:1px solid #D0D0D0
+    background-color:#F2F2F2
+
+.layui-m-layerbtn span 
+    display:block
+    -moz-box-flex:1
+    box-flex:1
+    -webkit-box-flex:1
+    font-size:14px
+    cursor:pointer
+
+.layui-m-layerbtn span[yes] 
+    color:#40AFFE
+
+.layui-m-layerbtn span[no] 
+    border-right:1px solid #D0D0D0
+    border-radius:0 0 0 5px
+
+.layui-m-layerbtn span:active 
+    background-color:#F6F6F6
+
+.layui-m-layerend 
+    position:absolute
+    right:7px
+    top:10px
+    width:30px
+    height:30px
+    border:0
+    font-weight:400
+    background:0 0
+    cursor:pointer
+    -webkit-appearance:none
+    font-size:30px
+
+.layui-m-layerend::after,.layui-m-layerend::before 
+    position:absolute
+    left:5px
+    top:15px
+    content:''
+    width:18px
+    height:1px
+    background-color:#999
+    transform:rotate(45deg)
+    -webkit-transform:rotate(45deg)
+    border-radius:3px
+
+.layui-m-layerend::after 
+    transform:rotate(-45deg)
+    -webkit-transform:rotate(-45deg)
+
+body .layui-m-layer .layui-m-layer-footer 
+    position:fixed
+    width:95%
+    max-width:100%
+    margin:0 auto
+    left:0
+    right:0
+    bottom:10px
+    background:0 0
+
+.layui-m-layer-footer .layui-m-layercont 
+    padding:20px
+    border-radius:5px 5px 0 0
+    background-color:rgba(255,255,255,.8)
+
+.layui-m-layer-footer .layui-m-layerbtn 
+    display:block
+    height:auto
+    background:0 0
+    border-top:none
+
+.layui-m-layer-footer .layui-m-layerbtn span 
+    background-color:rgba(255,255,255,.8)
+
+.layui-m-layer-footer .layui-m-layerbtn span[no] 
+    color:#FD482C
+    border-top:1px solid #c2c2c2
+    border-radius:0 0 5px 5px
+
+.layui-m-layer-footer .layui-m-layerbtn span[yes] 
+    margin-top:10px
+    border-radius:5px
+
+body .layui-m-layer .layui-m-layer-msg 
+    width:auto
+    max-width:90%
+    margin:0 auto
+    bottom:-150px
+    background-color:rgba(0,0,0,.7)
+    color:#fff
+
+.layui-m-layer-msg .layui-m-layercont 
+    padding:10px 20px
+  
+/*mint action sheet*/
+.mint-actionsheet
+    z-index: 11
+    position: fixed
+    background: #e0e0e0
+    width: 100%
+    text-align: center
+    bottom: 0
+    left: 50%
+    transform: translate3d(-50%, 0, 0)
+    backface-visibility: hidden
+    transition: transform .1s ease-out
+
+.mint-actionsheet-list 
+    list-style: none
+    padding: 0
+    margin: 0
+
+.mint-actionsheet-listitem 
+    border-bottom: solid 1px #e0e0e0
+
+.mint-actionsheet-listitem, .mint-actionsheet-button 
+    display: block
+    width: 100%
+    height: 45px
+    line-height: 45px
+    font-size: 16px
+    color: #333
+    background-color: #fff
+
+.mint-actionsheet-listitem:active, .mint-actionsheet-button:active 
+    background-color: #f0f0f0
+
+.actionsheet-float-enter, .actionsheet-float-leave-active 
+    transform: translate3d(-50%, 100%, 0)
+
+.sheet-complain ul
+    li.mint-actionsheet-listitem
+        color: #576B95
+
+.sheet-delete ul
+    li.mint-actionsheet-listitem
+        color: #F35B00
+.sheet-delete-relay
+    li.mint-actionsheet-listitem:first-child
+        color: #576b95
+.sheet-onlyTwo .mint-actionsheet-list
+    li.mint-actionsheet-listitem:first-child
+        display: none
+/*删除和修改*/
+.sheet-delete-revise
+    li.mint-actionsheet-listitem:nth-child(1)
+        color: #F35B00
+    li.mint-actionsheet-listitem:nth-child(2)
+        color: #576b95
+/*popup.css*/
+.v-modal-enter
+    animation: v-modal-in .1s ease;
+
+.v-modal-leave
+    animation: v-modal-out .1s ease forwards;
+
+@-webkit-keyframes v-modal-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    }
+}
+
+@keyframes v-modal-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    }
+}
+
+@-webkit-keyframes v-modal-out {
+    0% {
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes v-modal-out {
+    0% {
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.v-modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  opacity: 0.5
+  background: #000
+
+/*mint-ui 提示框*/
+
+.mint-msgbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: #fff;
+    width: 85%;
+    border-radius: 3px;
+    font-size: 16px;
+    -webkit-user-select: none;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: .1s;
+}
+.mint-msgbox-header {
+    padding: 15px 0 0;
+}
+.mint-msgbox-content {
+    padding: 10px 20px 15px;
+    border-bottom: 1px solid #ddd;
+    min-height: 36px;
+    position: relative;
+}
+.mint-msgbox-input {
+    padding-top: 15px;
+}
+.mint-msgbox-input input {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 4px 5px;
+    width: 100%;
+    appearance: none;
+    outline: none;
+}
+.mint-msgbox-input input.invalid {
+    border-color: #ff4949;
+}
+.mint-msgbox-input input.invalid:focus {
+    border-color: #ff4949;
+}
+.mint-msgbox-errormsg {
+    color: red;
+    font-size: 12px;
+    min-height: 18px;
+    margin-top: 2px;
+}
+.mint-msgbox-title {
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.mint-msgbox-message {
+    color: #999;
+    margin: 0;
+    text-align: center;
+    line-height: 36px;
+}
+.mint-msgbox-btns {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+}
+.mint-msgbox-btn {
+    line-height: 35px;
+    display: block;
+    background-color: #fff;
+    flex: 1;
+    margin: 0;
+    border: 0;
+}
+.mint-msgbox-btn:focus {
+    outline: none;
+}
+.mint-msgbox-btn:active {
+    background-color: #fff;
+}
+.mint-msgbox-cancel {
+    width: 50%;
+    border-right: 1px solid #ddd;
+}
+.mint-msgbox-cancel:active {
+    color: #000;
+}
+.mint-msgbox-confirm {
+    color: #26a2ff;
+    width: 50%;
+}
+
+.mint-msgbox-confirm:active
+    color: #26a2ff;
+
+.msgbox-bounce-enter 
+    opacity: 0
+    transform: translate3d(-50%, -50%, 0) scale(0.7)
+
+.msgbox-bounce-leave-active
+    opacity: 0
+    transform: translate3d(-50%, -50%, 0) scale(0.9)
+
+/*mintui swiper*/
+
+.mint-swipe 
+    color: #fff
+    text-align: center
+    overflow: hidden
+    position: relative
+    .mint-swipe-items-wrap
+        height: 100%
+        .mint-swipe-item
+            position: absolute
+            transform: translateX(-100%)
+            width: 100%
+            height: 100%
+            font-size: 0px
+            display: none
+            a
+                vertical-align: top
+                display: block
+                img
+                    max-width: 100%
+                    max-height: 100%
+        .is-active
+            display: block
+            transform: none
+    .mint-swipe-indicators
+        position: absolute
+        bottom: 0px
+        left: 0px
+        height: 8px
+        width: 100%
+        text-align: center
+        font-size: 0px
+        .mint-swipe-indicator
+            width: 5px;
+            height: 5px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 6px;
+            vertical-align: top
+        .mint-swipe-indicator.is-active 
+            background-color: rgba(130,130,130, 1);
+/*进度条*/
+.mt-progress
+    display: flex
+    width: 100%
+    .mt-progress-content 
+        position: relative
+        flex: 1
+        display: flex
+        .mt-progress-runway 
+            position: absolute
+            transform: translate(0, -50%)
+            top: 50%
+            left: 0
+            right: 0
+            background-color: #F3F3F3
+            height: 3px
+        .mt-progress-progress 
+            position: absolute
+            display: block
+            background-color: #F35B00
+            top: 50%
+            transform: translate(0, -50%)
+            width: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1590 @@
+
+@import "../../common/stylus/function.styl"
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+input[disabled],input:disabled,input.disabled{  
+    color: #999;  
+    -webkit-text-fill-color:#999;  
+    -webkit-opacity:1;  
+    opacity: 1;  
+}  
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+textarea, input, select {
+    outline: none
+    border: 0
+    resize: none
+    -webkit-appearance: none
+    background-color: transparent
+}
+
+input:focus, textarea:focus{
+    outline:0
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+select:-moz-placeholder,
+select:-moz-placeholder,
+select:-moz-placeholder,
+select:-moz-placeholder {
+    color:#999999
+    font-size: 12px
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder,
+select:-ms-select-placeholder,
+textarea:-ms-select-placeholder,
+select:-ms-select-placeholder{
+    color:#999999
+    font-size: 12px
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+select::-webkit-select-placeholder,
+textarea::-webkit-select-placeholder,
+select::-webkit-select-placeholder{
+    color:#999999
+    font-size: 12px
+}
+
+
+body {
+    line-height: 1.5;
+}
+
+em , i {
+    font-style: normal
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+a {
+    color: #333;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    /* width: 5px; */
+    /* height: 5px; */
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(230, 230, 230)
+}
+
+
+body, html
+    width: 100%
+    // height:100%
+    word-break: break-all
+    font-weight: 200;
+    font-family: "微软雅黑", 'Microsoft Yahei'
+    color: #333
+ 
+img[lazy=loading]
+    width: 62px
+    height: 62px
+
+
+.ellipsis
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.clearfix
+    display:inline-block
+    &:after
+        display: block
+        content: "."
+        height: 0
+        line-height: 0
+        clear: both
+        visibility: hidden
+.TransSize
+    font-size: 0.7em !important
+.topSeat
+    padding-top: 45px
+
+.botSeat
+    padding-bottom: 60px
+
+.shadow
+    box-shadow: 0 1.5px 1.5px rgba(0,0,0,.2)
+    margin-bottom: 10px
+    background: #fff
+.headerNav
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 45%;
+    background: rgba(51,51,51,.9);
+    z-index: 9999;
+    padding: 3%;
+    border-radius: 5px;
+    &:after
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 15%;
+        height: 0;
+        width: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid rgba(51,51,51,.9);
+    p
+        color: #fff;
+        font-size: 16px;
+        padding: 5%;
+        border-radius: 5px;
+    p.active
+        background: rgba(102,102,102,1);
+.header, .head-back
+    position: fixed
+    left:0px
+    top:0px
+    width: 100%
+    height: 45px
+    z-index:10
+    box-shadow: 0 1.5px 1.5px rgba(0,0,0,.2)
+    display: flex
+    background: #fff
+    .headerTitle
+        flex: 1
+        text-align: center
+        line-height: 45px
+        font-size: 18px
+        overflow: hidden
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 1
+        word-break: break-word
+    .Occupy
+        flex: 0 0 45px
+        text-align: center
+        line-height: 45px
+        span.o-idet
+            display: block
+        a.tolink
+            display: block
+        i
+            display: inline-block
+            font-size: 18px
+            vertical-align: middle
+        i.icon-address
+            font-size: 18px
+            color: #f35b00
+    .head-back-icon
+        flex: 0 0 45px
+        text-align: center
+        line-height: 45px
+        i
+            display: inline-block
+            font-size: 24px
+            vertical-align: middle
+        i.icon-leftarrow
+            font-size: 16px
+.header-search
+    flex: 1
+    margin: 8px 4% 7px
+    height: 30px
+    text-align: center
+    display: flex
+    background-color: #F3F3F3
+    border: 1px solid #CCCCCC
+    box-sizing: border-box
+    border-radius: 2px
+    .header-search-input
+        flex: 1
+        box-sizing: border-box
+        padding: 0 10px
+        color: #B2B2B2
+        font-size: 12px
+    i.icon-search, i.icon-close
+        flex: 0 0 30px
+        width: 30px
+        height: 30px
+        font-size: 20px
+        line-height: 30px
+        text-align: center
+        color: #9B9B9B
+    i.icon-close
+        font-size: 16px
+.loginIcon
+    flex: 0 0 45px
+    width: 45px
+    height: 45px
+    line-height: 45px
+    text-align: center
+    font-size: 0px
+    a.login-text
+        display: block
+        height: 45px
+        line-height: 45px
+        font-size: 12px
+        color: #F35B00
+    a.login-message
+        display: block
+        position: relative
+        i.icon-xiaoxi
+            height: 45px
+            line-height: 45px
+            text-align: center
+            display: block
+            font-size: 18px
+        em.dot
+            position: absolute
+            right: 4px
+            top: 4px
+            width: 18px
+            height: 18px
+            line-height: 18px
+            text-align: center
+            background-color: #f35b00
+            color: #fff
+            font-size: 12px
+            border-radius: 50%
+    a.loginIcon-home
+        display: block
+        height: 45px
+        line-height: 45px
+        font-size: 15px
+    span.loginIcon-text
+        display: block
+        font-size: 16px
+.headerTab
+    flex: 1
+    margin: 8px 4% 7px
+    text-align: center
+    box-sizing:border-box
+    display: flex
+    border: 1px solid #F35B00
+    height: 30px
+    line-height: 30px
+    border-radius: 2px
+    a
+        font-size: 14px
+        color: #F35B00
+        letter-spacing: .82px
+        flex: 1
+        box-sizing: border-box
+        border-right-px(1px, rgba(243,91,0,1))
+        &.active
+            background: #F35B00
+            color: #FFF
+        &:last-child
+            border-right-px(0px, rgba(243,91,0,1))
+
+.padBothSide
+    padding: 0 10px
+
+/*公共块样式*/
+h3.console-txt-h3
+    font-size: 16px
+    display: flex
+    padding: 8px 10px
+    border-bottom-px(1px, rgba(7, 17, 27, 0.1))
+    span
+        flex: 1
+    i
+        flex: 0 0 40px
+        text-align: center
+        color: #999
+        line-height: 24px
+        font-size: 14px
+    i.icon-topic
+        font-size: 18px
+        color: #f35b00
+h3.console-txt-line
+    display: flex
+    position: relative
+    padding: 6px 0px
+    border-bottom: 3px solid #EBEBEB
+    background-color: #fff
+    &:before
+        position: absolute
+        left: 0px
+        top: 0px
+        height: 100%
+        width: 4px
+        background-color: #F35B00
+        content:''
+    span
+        flex: 1
+        padding: 0 10px
+        box-sizing: border-box
+        font-size: 14px
+        color: #F35B00
+    i
+        flex: 0 0 40px
+        text-align: center
+        color: #999
+        line-height: 24px
+        font-size: 14px
+    i.icon-topic
+        font-size: 20px
+        color: #f35b00
+h3.console-txt-title
+    display: flex
+    background-color: #fff
+    padding: 0 10px
+    height: 36px
+    line-height: 36px
+    border-bottom-px(1px, #EBEBEB)
+    i.icon-hot, i.icon-tuijian
+        flex: 0 0 20px
+        width: 20px
+        text-align: left
+        height: 36px
+        line-height: 34px
+        color: #F5C91B
+    .text-icon
+        flex: 0 0 60px
+        width: 60px
+        text-align: right
+        font-size: 12px
+        color: #999999
+    p.console-in-text
+        flex: 1
+        font-size: 14px
+        color: #333333
+
+
+h4.console-txt-line
+    font-size: 14px
+    display: flex
+    padding: 8px 0
+    position: relative
+    padding-left: 16px
+    &:before
+        content:''
+        position: absolute
+        left: 0px
+        width: 6px
+        height: 14px
+        top: 50%
+        margin-top: -7px
+        background-color: #F35B00
+    span
+        flex: 1
+
+.viewSee_more
+    background: #f2f2f2;
+    text-align: center;
+    border-top-px(1px, rgba(0,0,0,.1))
+    a
+        display: block
+        line-height: 34px
+        font-size: 14px
+        color: #999
+
+.sticky-area
+    position: sticky
+    top: 0px
+    z-index: 11
+    margin-top: 2px
+    padding-top: -2px
+.search-bar
+    background: #FDFDFD
+    padding: 10px
+    display: flex
+    .search-inner
+        flex: 1
+        height: 30px
+        line-height: 30px
+        box-sizing: border-box
+        border: 1px solid rgba(0,0,0,.05)
+        border-right: 0px
+        display: flex
+        background: #f3f3f3
+        border-radius: 2px 0 0 2px
+        i
+            flex: 0 0 30px
+            font-size: 16px
+            color: #b2b2b2
+            line-height: 30px
+            text-align: center
+        input
+            flex: 1
+            box-sizing: border-box
+            padding: 4px 10px
+            font-size: 12px
+            background-color: transparent
+    .search-btn
+        flex: 0 0 50px
+        text-align: center
+        color: #fff
+        height: 30px
+        line-height: 30px
+        background: #F35B00
+        border-radius: 0 2px 2px 0
+        font-size: 14px
+
+.cell-filter
+    border-bottom: 1px solid rgba(0,0,0,.05)
+    border-top: 1px solid rgba(0,0,0,.05)
+    padding: 10px
+    background: #fff
+    display: flex
+    .cell-filter-box
+        flex: 1
+        -webkit-overflow-scrolling: touch
+        white-space: nowrap
+        overflow-x: scroll
+        overflow-y: hidden
+        ul
+            font-size: 0px
+            li
+                font-size: 14px
+                display: inline-block
+                padding: 0 16px
+                height: 24px
+                line-height: 24px
+                &.active
+                    color: #f35b00
+    .class-filter
+        flex: 0 0 62px
+        text-align: center
+        font-size: 0px
+        padding-left: 6px
+        box-sizing: border-box
+        i
+            vertical-align: middle
+            font-size: 16px
+            width: 24px
+            line-height:24px
+            color: #999
+            display: inline-block
+        span
+            color: #999
+            width: 32px
+            font-size: 15px
+            line-height:24px
+            vertical-align: middle
+            display: inline-block
+.list-handle
+    flex: 0 0 50px
+    text-align: center
+    i
+        width: 40px
+        height: 40px
+        line-height: 40px
+        display: inline-block
+        vertical-align: middle
+        font-size: 22px
+        color: #999
+    i.icon-rightarrow
+        font-size: 12px
+    i.icon-address
+        color: #f35b00
+        font-size: 22px
+i.icon_color
+    color: #f35b00 !important
+/*列表*/
+.listCol
+    background:#fff
+    ul.in-list
+        padding-left: 10px
+        li
+            border-bottom-px(1px, rgba(0,0,0,0.05))
+            display: flex
+            padding: 14px 0
+        a
+            display: block
+            flex: 1
+        .infro
+            display: flex
+            .photo
+                flex: 0 0 64px
+                border: 1px solid #e6e6e6
+                width: 64px
+                height: 64px
+                font-size: 0px
+                line-height: 62px
+                overflow: hidden
+                box-sizing: border-box
+                text-align: center
+                border-radius: 4px
+                position: relative
+                img
+                    vertical-align:middle;
+                    max-height: 62px
+                    max-width: 62px
+            .text
+                flex: 1
+                box-sizing: border-box
+                padding-left: 10px
+                h6
+                    font-size: 16px
+                    height: 24px
+                    line-height: 24px
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    -webkit-line-clamp: 1
+                    word-break: break-word
+                p
+                    line-height: 20px
+                    height: 20px
+                    font-size: 12px
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    -webkit-line-clamp: 1
+                    word-break: break-word
+        .list-handle
+            height: 64px
+            line-height: 64px
+        .tag
+            padding: 4px 0px
+            font-size: 0px
+            height: 18px
+            margin-top: 4px
+            line-height: 18px
+            i
+                font-size: 16px
+                color: #F35B00
+                width: 18px
+                height: 18px
+                line-height: 18px
+                display: inline-block
+                vertical-align: top
+            span
+                font-size: 12px
+                display: inline-block
+                vertical-align: top
+                margin-left: 6px
+                &.green
+                    color: #A3C512
+                &.yellow
+                    color: #F2AE43
+                &.orange
+                    color: #F35B00
+.listCol-arraw
+    ul.in-list li
+        .infro
+            flex: 1
+        a
+            display: flex
+.noMoreData
+    padding: 10px
+    text-align: center
+    font-size: 14px
+    color: #999
+.view-more
+    display: block
+    background-color: #f2f2f2
+    text-align: center
+    height: 34px
+    line-height: 34px
+    border-top-px(1px, rgba(0,0,0,0.01))
+    font-size: 14px
+    color: #999999
+    span
+        display: inline-block
+        height: 34px
+        line-height: 34px
+        vertical-align: top
+    em
+        display: inline-block
+        height: 34px
+        line-height: 34px
+        vertical-align: top
+        font-style: normal
+    i
+        display: inline-block
+        height: 34px
+        line-height: 34px
+        vertical-align: top
+        font-size: 12px
+        margin:0 8px
+.mask-shadow
+    position: fixed
+    left: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.3)
+    z-index: 15
+.mine-nolist-tips
+    text-align: center
+    color:#9B9B9B
+    padding: 40px 10px 20px
+    i
+        font-size: 54px
+    p
+        margin: 10px 0 20px
+        font-size: 14px
+    a.create-btn
+        display: inline-block
+        color: #FFF
+        background-color: #F35B00
+        padding: 5px 20px
+        border-radius: 2px
+        font-size: 14px
+div.create-btn
+    display: inline-block
+    color: #FFF
+    background-color: #F35B00
+    padding: 5px 20px
+    border-radius: 2px
+    font-size: 14px
+.help-list
+    border-bottom: 2px solid #f2f2f2
+    p
+        display: flex
+        a
+            display: block
+            flex:1
+            display: flex
+        i
+            flex: 0 0 46px
+            width: 46px
+            height: 46px
+            text-align: center
+            font-size: 16px
+            line-height: 46px
+            color: #666
+        span
+            box-sizing: border-box
+            flex:1
+            line-height: 22px
+            padding: 12px 10px
+            font-size: 14px
+            color: #333
+            border-bottom-px(1px, rgba(0,0,0,.05))
+
+
+/*动态*/
+.m-center
+    background-color: #e6e6e6
+    .m-list
+        transition: all 2s ease;
+    .m-list-top
+        padding: 10px
+        display: flex
+        a.link
+            flex: 1
+            display: block
+        .infro
+            display: flex
+            .photo
+                width: 50px
+                height: 50px
+                flex: 0 0 50px
+                font-size: 0px
+                line-height: 50px
+                border-radius: 4px
+                text-align: center
+                box-sizing: border-box
+                overflow: hidden
+                img
+                    vertical-align: middle
+                    max-height: 50px
+                    max-width: 50px
+            .text
+                box-sizing: border-box
+                padding: 0 10px
+                flex: 1
+                h6
+                    line-height: 18px
+                    height: 18px
+                    overflow: hidden
+                    font-size: 14px
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    -webkit-line-clamp: 1
+                p
+                    height: 16px
+                    line-height: 16px
+                    overflow: hidden
+                    font-size: 12px
+                    color: #999
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    -webkit-line-clamp: 1
+        .list-handle
+            flex: 0 0 40px
+            height: 40px
+            width: 40px
+            i
+                width: 40px
+                height: 40px
+                line-height: 40px
+                font-size: 12px
+                color: #ccc
+    .m-list-text
+        padding: 0 10px
+        p
+            font-size: 15px
+            line-height: 20px
+            word-break: break-word
+        .img
+            margin-top: 10px
+            text-align: left
+            img
+                max-width: 100%
+                max-height: 200px
+    .m-list-time
+        padding: 10px
+        color: #999
+        font-size: 12px
+        span.m-creat-time
+            font-size: 12px
+        em
+            font-size: 12px
+            margin-left: 10px
+            font-style: normal
+        a.at
+            font-size: 12px
+            color:#576B95
+.comment-like-handle
+    text-align: center
+    font-size: 0px
+    padding: 3px 0
+    border-top-px(1px, rgba(0,0,0,.05))
+    a
+        display: inline-block
+        width: 50%
+        height: 30px
+        line-height: 30px
+        color: #999
+        font-size: 0px
+        vertical-align: top
+        &:first-child
+            border-right-px(1px, rgba(0,0,0,.05))
+        i
+            display: inline-block
+            font-size: 18px
+            height: 30px
+            line-height: 30px
+            vertical-align: top
+        span
+            font-size: 16px
+            display: inline-block
+            line-height: 30px
+            margin-left: 6px
+            vertical-align: top
+/*互动话题*/
+.t-center .t-list
+    border-bottom-px(1px, rgba(0,0,0,.05))
+    padding: 14px 10px
+    .topic-title-new-ident
+        position: absolute
+        right: 0px
+        top: 0px
+        width: 40px
+        img
+            width: 40px
+    .topic-title-ident
+        position: absolute
+        right: 0px
+        top: 0px
+        width: 40px
+        height: 40px
+        line-height: 40px
+        text-align: center
+        font-size: 30px
+        color: #10AEFF
+    .topic-title-handle
+        padding-right: 40px
+    a.topic-title-link
+        display: block
+    h3.topic-title
+        font-size: 16px
+        word-break: break-word
+    .topic-infro
+        display: flex
+        padding: 10px 0
+    .topic-creator
+        display: flex
+        flex: 1
+        .photo
+            flex: 0 0 20px
+            width: 20px
+            height: 20px
+            line-height: 20px
+            overflow: hidden
+            font-size: 0px
+            border-radius: 2px
+            img
+                max-width: 20px
+                max-height: 20px
+                vertical-align: middle
+        p
+            flex: 1
+            box-sizing: border-box
+            padding: 0 10px
+            font-size: 12px
+            height: 20px
+            line-height: 20px
+            color: #999999
+            overflow: hidden
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            -webkit-line-clamp: 1
+    .comment-like-handle
+        flex: 0 0 100px
+        width: 100px
+        text-align: right
+        font-size: 0px
+        &:after
+            display: none
+        a
+            font-size: 16px
+            display: inline-block
+            width: 50%
+            height: 20px
+            line-height: 20px
+            &:after
+                display: none
+            i
+                display: inline-block
+                font-size: 15px
+                height: 20px
+                line-height: 20px
+            span
+                display: inline-block
+                font-size: 12px
+                height: 20px
+                line-height: 20px
+/*互动话题评论列表和动态评论*/
+.main-comment-detail
+    margin-top: 10px
+    background-color: #fff
+    padding:0 10px
+    .main-comment-list
+        padding: 14px 0
+        border-bottom-px(1px, rgba(0,0,0,.05))
+        display: flex
+        a.link
+            display: block
+            flex: 0 0 30px
+            width: 30px
+            height: 30px
+            .photo
+                width: 30px
+                height: 30px
+                line-height: 30px
+                overflow: hidden
+                border-radius: 2px
+                text-align: center
+                img
+                    max-height: 100%
+                    max-width: 100%
+        .text
+            box-sizing: border-box
+            padding-left: 10px
+            color: #666
+            flex: 1
+            h4
+                font-size: 14px
+            h6
+                font-size: 16px
+                padding: 8px 0
+                color: #333
+                em
+                    font-style: normal
+                span.to-who
+                    color: #576B95
+                    margin: 0 2px 0 4px
+            p.time
+                font-size: 12px
+                color: #9B9B9B
+                em
+                    font-style: normal
+                    color: #576B95
+                    margin-left: 16px
+.comment-reply
+    .comment-reply-list
+        display: flex
+        padding: 4px 10px
+        background-color: #F3F3F3
+        border-bottom-px(1px, rgba(0, 0, 0, 0.05))
+        &:first-child
+            padding-top: 10px
+            margin-top: 10px
+        &:last-child
+            padding-bottom: 10px
+        .text
+            h4.name
+                display: flex
+                font-size: 12px
+                span
+                    flex: 1
+                    color: #576B95
+                em
+                    flex: 0 0 50px
+                    text-align: right
+                    height: 20px
+                    line-height: 20px
+                    font-style: normal
+                    color: #9B9B9B
+            h6
+                font-size: 12px
+                padding: 0px
+                margin-top: 2px
+            p.time
+                text-align: right
+                span
+                    display: inline-block
+                    color: #576B95
+ /*错误页面*/
+.main-error
+    padding: 10px
+    text-align: center
+    .main-error-img
+        width: 120px
+        margin: 160px auto 0
+        img
+            max-width: 100%
+    p
+        margin-top: 24px
+        font-size: 26px
+        color: #ccc
+/*日程列表共用样式*/
+.meetingList
+    .meetingPlace
+        background: #fff
+        h3
+            background: #fafafa
+            border-top-px(1px, rgba(7, 17, 27, 0.1))
+            font-size: 13px
+            line-height: 24px
+        ul
+            padding-left: 14px
+        li
+            display: flex
+            border-bottom-px(1px, rgba(0, 0, 0, 0.05))
+            &:last-child
+                border-bottom-px(0px, rgba(0, 0, 0, 0.05))
+            .toLink
+                flex: 1
+                display:flex
+                padding: 12px 0
+                .timer
+                    flex: 0 0 50px
+                    font-size: 12px
+                    span
+                        display: block
+                    span:last-child
+                        color: #999999
+                        line-height: 18px
+                .meetTxt
+                    flex: 1
+                    box-sizing: border-box
+                    padding: 0 16px
+                    font-size: 15px
+                    border-left-px(1px, rgba(0, 0, 0, 0.05))
+                    .meetTxt-theme
+                        display: -webkit-box
+                        -webkit-box-orient: vertical
+                        -webkit-line-clamp: 2;
+                        overflow: hidden
+                        line-height: 20px
+            .list-handle
+                line-height: 64px
+                i
+                    font-size: 22px
+                i.icon-righttag
+                    font-size: 16px
+                    color: #F35B00
+    .listCol ul.in-list
+        padding-left: 0px
+        li
+            padding: 3px 0
+            .infro .photo
+                flex: 0 0 40px
+                width: 40px
+                height: 40px
+                line-height: 38px
+                img
+                    max-width: 38px
+                    max-height: 38px
+            .infro .text h6
+                height: 20px
+                line-height: 20px
+                font-size: 12px
+
+/*输入框 共用样式*/
+.create-form
+    padding: 8px 14px
+    .field-forget
+        text-align: right
+        a
+            color: #999999
+            text-decoration: underline
+            font-size: 12px
+    .ready-submit
+            line-height: 44px
+            background-color: #F35B00
+            color: #fff
+            margin-top: 20px
+            border-radius: 4px
+            text-align: center
+            font-size: 18px
+.field-main
+    margin-bottom: 10px
+    .field-service
+        font-size: 14px
+        // height: 20px
+        // line-height: 20px
+        span
+            display: inline-block
+            vertical-align: top
+            i
+                display: inline-block
+                height: 20px
+                line-height: 20px
+                font-size: 16px
+                width: 20px
+                margin-right: 4px
+                vertical-align: -1px
+                &.icon-checked
+                    color: #f35b00
+        a
+            display: inline-block
+            vertical-align: top
+    .field-justify
+        display: flex
+        .field-box
+            flex: 1
+        .field-code-btn
+            flex: 0 0 130px
+            width: 130px
+            margin-left: 10px
+            height: 40px
+            line-height: 40px
+            border-radius: 4px
+            text-align: center
+            background-color: #f35b00
+            color: #fff
+            font-size: 14px
+        .field-code-grey
+            background-color: #cccccc
+        .field-box-col4
+            flex: 4
+            margin-right: 10px
+        .field-box-col8
+            flex: 8
+    .field-title
+        color: #999
+        padding: 6px 0
+        font-size: 16px
+        vertical-align: middle
+    em.red-star
+        color: #E64F38
+        vertical-align: middle
+    .field-box
+        display: flex
+        border: 1px solid #C9D0D6
+        background-color: #F0EFED
+        font-size: 14px
+        border-radius: 2px
+        .field-input
+            flex: 1
+            input, select
+                display: block
+                width: 100%
+                height: 38px
+                line-height: 38px
+                font-size: 14px
+                background-color: transparent
+                box-sizing: border-box
+                padding: 0 10px
+            textarea
+                display: block
+                width: 100%
+                height: 100px
+                line-height: 20px
+                background-color: transparent
+                box-sizing: border-box
+                padding: 8px 10px
+                color: #352E2B
+        .field-disabled
+            input
+                color: #999
+        .field-handle
+            flex: 0 0 40px
+            width: 40px
+            height: 38px
+            text-align: center
+            text-align: center
+            i
+                width: 40px
+                height: 38px
+                line-height: 38px
+                vertical-align: top
+                display: none
+                color: #ccc
+                font-size: 16px
+    p.field-error
+        min-height: 16px
+        line-height: 16px
+        padding: 2px 0
+        color: #ff0000
+        font-size: 12px
+    .field-choose-list
+        display: flex
+        padding: 10px 0 10px 10px
+        i
+            flex: 0 0 20px
+            width: 20px
+            height: 20px
+            line-height: 20px
+            margin-right: 6px
+        span
+            flex: 1
+            line-height: 20px
+    .field-choose-on
+        i
+            color: #f35b00
+    .ready-submit
+        line-height: 44px
+        background-color: #F35B00
+        color: #fff
+        margin-top: 20px
+        border-radius: 4px
+        text-align: center
+        font-size: 18px
+.field-col2 .field-choose
+    .field-choose-list
+        display: inline-block
+        vertical-align: top
+        padding: 4px 0
+        margin-right: 20px
+/*滑动验证*/
+.field-main
+    .ln
+        padding: 0px !important
+    ._nc .stage
+        padding: 0px !important
+    ._nc .stage1
+        height: 40px
+    ._nc .stage1 .button
+        width: 40px
+        height: 40px
+        border: 1px solid #ccc
+        box-sizing: border-box
+    ._nc .stage1 .icon
+        left: 0px
+        right: 0px
+        text-align: center
+        line-height: 30px
+    ._nc .icon-slide-arrow
+        font-size: 20px
+    ._nc .stage1 .slider
+        left: 0px
+        right: 0px
+        height: 40px
+        box-shadow: none
+        .label
+            height: 40px
+            line-height: 40px
+            color: #999
+            font-size: 14px
+            background: #f0efed
+            -webkit-text-fill-color:#999
+    ._nc .stage1 .track div, ._nc .stage1 .label
+        height: 40px
+        line-height: 40px
+/*嘉宾详情页-头像-公司公用样式*/
+.attend-top
+    background-color: #fff
+    .attend-infro
+        padding: 10px 0 10px 10px
+        display: flex
+        .photo
+            flex: 0 0 72px
+            height: 72px
+            width: 72px
+            line-height: 70px
+            font-size: 0px
+            text-align: center
+            border-radius: 6px
+            overflow: hidden
+            box-sizing: border-box
+            border: 1px solid #e6e6e6
+            img
+                max-width: 70px
+                max-height: 70px
+                vertical-align: middle
+        .text
+            flex: 1
+            box-sizing: border-box
+            padding:0 10px 0 14px
+            font-size: 14px
+            line-height: 24px
+            color: #666
+            span
+                color: #000
+    .attend-text
+        margin:0 10px
+        padding: 10px 0
+        font-size: 12px
+        color: #666
+        border-top-px(1px, rgba(0,0,0,.05))
+    .list-handle
+        height: 72px
+        line-height: 72px
+
+/*分类测导航*/
+.classifyBar
+    position: fixed
+    left: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    background-color: #fff
+    z-index: 12
+    transform: translate3d(0, 0, 0)
+    &.move-enter-active, &.move-leave-active
+        transition: all 0.2s linear
+    &.move-enter, &.move-leave-active
+        transform: translate3d(100%, 0, 0)
+    .classifyButtom
+        position: absolute
+        left:0px
+        bottom: 0px
+        width: 100%
+        height: 52px
+        font-size:0px
+        a
+            font-size: 16px
+            display: inline-block
+            width: 50%
+            height: 52px
+            line-height: 52px
+            text-align: center
+            color: #666
+            background-color: #E6E6E6
+            &.submit
+                color: #fff
+                background-color: #F35B00
+/*展位展品-注册地址*/
+.booth-local
+    padding: 10px
+    background-color: #fff
+    h6
+        font-size: 18px
+        color: #333333
+        line-height: 28px
+        text-align:center
+        margin-bottom: 10px
+    p
+        margin-top: 20px
+        text-align: center
+        line-height: 26px
+        a
+            font-size: 12px
+            color: #3C99EE
+            text-decoration: underline
+    .select-area
+        margin-bottom: 20px
+        select
+            display: block
+            width: 100%
+            height: 38px
+            line-height: 38px
+            background-color: #F3F3F3
+            border: 1px solid #C9D0D6
+            border-radius: 2px
+            box-sizing: border-box
+            padding: 0 10px
+    .ready-submit
+        line-height: 44px
+        background-color: #F35B00
+        color: #fff
+        margin-top: 20px
+        border-radius: 4px
+        text-align: center
+        font-size: 18px
+/*展位展品-提交分类*/
+.booth-classify
+    padding: 10px
+    background-color: #fff
+    h6.local-title
+        font-size: 15px
+        color: #999999
+        line-height: 20px
+        text-align: left
+        margin-bottom: 10px
+    p.local-tips
+        margin-top: 20px
+        text-align: center
+        line-height: 26px
+        a
+            font-size: 12px
+            color: #3C99EE
+            text-decoration: underline
+    .ready-submit
+        line-height: 44px
+        background-color: #F35B00
+        color: #fff
+        margin-top: 20px
+        border-radius: 4px
+        text-align: center
+        font-size: 18px
+    .classifyNav
+        width: 100%
+        li
+            font-size: 14px
+            line-height: 40px
+            margin-left: 20px
+            li
+                margin-left: 30px
+        .level
+            display: flex
+            border-bottom:1px solid  rgba(0, 0, 0, 0.05)
+        p.overText
+            display: flex
+            flex: 1
+            position: relative
+            i.add
+                flex: 0 0 30px
+                width: 30px
+                height: 40px
+                color: #f35b00
+                line-height: 40px
+                display: inline-block
+                text-align: center
+            span
+                flex: 1
+        i.all
+            display: inline-block
+            flex: 0 0 40px
+            width: 40px
+            height: 40px
+            text-align: center
+            line-height: 40px
+            font-size: 16px
+        ul div.select
+            position:relative
+            border-bottom:1px solid #F35B00;
+            color:#F35B00
+            &:after
+               position:absolute;
+               right:0;
+               top:0;
+               padding:0 10px 0 5%;
+               content: "\e609";
+               font-family:"iconfont" !important;
+               font-size:16px
+               font-style:normal
+               -webkit-font-smoothing:antialiased
+               -moz-osx-font-smoothing:grayscale
+               color:#F35B00
+        .icon-checked
+            color: #f35b00
+/*来宾页面同部门同行业*/
+.DepartmentOrtagIndustry  
+    padding: 10px
+    background-color: #fff
+    h6.local-title
+        font-size: 18px;
+        color: #333;
+        line-height: 25px;
+        text-align: center;
+        padding: 15px 0;
+    select
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        text-indent: 10px;
+    p.selectBox
+        height: 45px;
+        line-height: 45px;
+        width: 90%;
+        background: #F3F3F3;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 auto 15px;
+    .ready-submit
+        line-height: 44px
+        background-color: #F35B00
+        color: #fff
+        margin-top: 20px
+        border-radius: 4px
+        text-align: center
+        font-size: 18px
+/*展品展位，顶部tab切换按钮*/
+.booth-fav-tab ul
+    display: flex
+    width: 100%
+    background-color: #fff
+    li
+        text-align: center
+        flex: 1
+        width: 50%
+        span
+            display: inline-block
+            height: 46px
+            line-height: 46px
+            border-bottom: 1px solid transparent
+        &.active
+            span
+                border-bottom: 1px solid #f35b00
+
+/*隐藏地图的楼层按钮*/
+.fm-control-groups-btn, .fm-layer-list
+    display: none !important
+/*来宾页面- 完善个人信息*/
+.upinfro-tips
+    font-size: 14px
+    padding: 4px 10px
+    text-align: center
+    line-height: 20px
+    span
+        display: block
+        margin-top: 6px
+        color: #f35b00
+.upinfro-trueBtn
+    color: #f35b00 !important
+/*上拉下拉刷新*/
+.dropload-up,
+.dropload-down
+    position: relative
+    height: 0
+    overflow: hidden
+    font-size: 12px
+    transform: translateZ(0)
+
+.dropload-down
+    height: 50px
+.dropload-refresh,
+.dropload-update,
+.dropload-load,
+.dropload-noData
+    height: 50px
+    line-height: 50px
+    text-align: center
+    color: #999
+    color: rgba(153,153,153,0.7)
+
+
+.dropload-load .loading
+    display: inline-block
+    height: 15px
+    width: 15px
+    border-radius: 100%
+    margin: 6px
+    border: 2px solid #666
+    border-bottom-color: transparent;
+    vertical-align: middle
+    animation: rotate 0.75s linear infinite
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    50% {
+        -webkit-transform: rotate(180deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+@keyframes line-scale
+{
+    0%, 40%, 100% {
+        transform: scaleY(0.4)
+    }
+    20% {
+        transform: scaleY(1)
+    }
+}
+
+/*英文状态下，字体变小*/
+span.loginIcon-text.SmallFont
+    font-size: 13px !important
+
+@import "./iconfont.styl"
+@import "./media.styl"
+@import "./mintui.styl"
+

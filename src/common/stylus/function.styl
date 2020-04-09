@@ -1,0 +1,59 @@
+border-bottom-px($width, $color)
+    position: relative
+    &:after
+        position: absolute
+        width: 100%
+        bottom: 0px
+        left: 0px
+        content: ''
+        border-bottom: $width solid $color
+
+border-top-px($width, $color)
+    position: relative
+    &:after
+        position: absolute
+        width: 100%
+        top: 0px
+        left: 0px
+        content: ''
+        border-top: $width solid $color       
+
+border-left-px($width, $color)
+    position: relative
+    &:after
+        position: absolute
+        width:$width
+        height: 100%
+        top: 0px
+        left: 0px
+        content: ''
+        border-left: $width solid $color
+
+border-right-px($width, $color)
+    position: relative
+    &:after
+        position: absolute
+        height: 100%
+        width:$width
+        top: 0px
+        right: 0px
+        content: ''
+        border-right: $width solid $color
+
+backImg($url)
+    background-image:url($url + '@2x.png')
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        background-image:url($url + '@3x.png')
+        
+backRepeatSize($w, $h)
+    width: $w
+    height: $h
+    background-repeat:no-repeat
+    background-position:center center
+    background-size:$w $h
+
+    
+    
+
+
+
